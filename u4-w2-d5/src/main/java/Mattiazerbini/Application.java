@@ -49,6 +49,7 @@ public class Application {
                 String genereInput = scanner.nextLine();
                 Videogiochi.Genere generi = Videogiochi.Genere.valueOf(genereInput);
 
+                //AGGIUNTI TRY E CATCH PER IL CORRETTO INSERIMENTO DEGLI ELEMENTI ALL'INTERNO DELL'ARRAY LIST
                 Videogiochi v = new Videogiochi(id, titolo, annoPubblicazione, prezzo, piattaforma, durata, generi);
                 if (collezione.aggiungiGioco(v)) {
                     System.out.println("Gioco inserito correttamente!");
@@ -57,6 +58,7 @@ public class Application {
                 }
 
                 } catch (IllegalArgumentException e) {
+                    //CONTROLLO DELL'INSERIMENTO DEL GENERE INSERITO
                     System.out.println("Genere non valido. Inserimento annullato.");
                 } catch (Exception e) {
                     System.out.println("Errore nei dati inseriti. Inserimento annullato.");
@@ -76,12 +78,15 @@ public class Application {
                     double prezzo = Double.parseDouble(scanner.nextLine());
                     System.out.println("Numero di giocatori: ");
                     int numGiocatori = Integer.parseInt(scanner.nextLine());
+                    //CONTROLLO DEL NUMERO DEI GIOCATORI
                     if(numGiocatori < 2 || numGiocatori > 10){
                         System.out.println("Numero di giocatori non valido, minimo 2 massimo 10. Operazione annullata");
                         break;
                     }
                     System.out.println("Durata media in minuti: ");
                     int durata = Integer.parseInt(scanner.nextLine());
+
+                    //AGGIUNTI TRY E CATCH PER IL CORRETTO INSERIMENTO DEGLI ELEMENTI ALL'INTERNO DELL'ARRAY LIST
                     GiochiDaTavolo g = new GiochiDaTavolo(id, titolo, annoPubblicazione, prezzo, numGiocatori, durata);
                     if (collezione.aggiungiGioco(g)) {
                         System.out.println("Gioco inserito correttamente!");
