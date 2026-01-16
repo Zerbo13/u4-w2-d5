@@ -1,8 +1,16 @@
 package Mattiazerbini;
 
-public class Application {
+import Mattiazerbini.entities.Collezione;
 
+import java.util.Scanner;
+
+public class Application {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        Scanner scanner = new Scanner(System.in);
+        Collezione collezione = new Collezione();
+
+        int scelta = -1;
+
     }
 }
