@@ -15,8 +15,14 @@ public class GiochiDaTavolo {
         this.titolo = titolo;
         this.AnnoPubblicazione = AnnoPubblicazione;
         this.prezzo = prezzo;
-        this.numeroGiocatori = numeroGiocatori;
         this.durataMedia = durataMedia;
+
+        if(numeroGiocatori < 2 || numeroGiocatori > 10){
+            System.out.println("Troppi giocatori per questo gioco");
+            this.numeroGiocatori = 2;
+        } else {
+            this.numeroGiocatori = numeroGiocatori;
+        }
     }
 
     public int getIdGioco(){
