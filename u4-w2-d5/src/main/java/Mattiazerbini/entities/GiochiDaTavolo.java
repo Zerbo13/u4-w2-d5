@@ -2,19 +2,13 @@ package Mattiazerbini.entities;
 
 import java.util.Date;
 
-public class GiochiDaTavolo {
-    private int IdGioco;
-    private String titolo;
-    private Date AnnoPubblicazione;
-    private double prezzo;
+public class GiochiDaTavolo extends  Gioco{
+
     private int numeroGiocatori;
     private int durataMedia;
 
-    public GiochiDaTavolo(int IdGioco, String titolo, Date AnnoPubblicazione, double prezzo, int numeroGiocatori, int durataMedia){
-        this.IdGioco = IdGioco;
-        this.titolo = titolo;
-        this.AnnoPubblicazione = AnnoPubblicazione;
-        this.prezzo = prezzo;
+    public GiochiDaTavolo(int Id, String titolo, Date AnnoPubblicazione, double prezzo, int numeroGiocatori, int durataMedia){
+        super(Id, titolo, AnnoPubblicazione, prezzo);
         this.durataMedia = durataMedia;
 
         if(numeroGiocatori < 2 || numeroGiocatori > 10){
@@ -23,22 +17,6 @@ public class GiochiDaTavolo {
         } else {
             this.numeroGiocatori = numeroGiocatori;
         }
-    }
-
-    public int getIdGioco(){
-        return IdGioco;
-    }
-
-    public String getTitolo(){
-        return titolo;
-    }
-
-    public Date getAnnoPubblicazione(){
-        return AnnoPubblicazione;
-    }
-
-    public double getPrezzo(){
-        return prezzo;
     }
 
     public int getNumeroGiocatori(){

@@ -2,11 +2,7 @@ package Mattiazerbini.entities;
 
 import java.util.Date;
 
-public class Videogiochi {
-        private int IdVideogioco;
-        private String titolo;
-        private Date AnnoPubblicazione;
-        private double prezzo;
+public class Videogiochi extends Gioco{
         private String piattaforma;
         private double durata;
         private Genere genere;
@@ -18,30 +14,11 @@ public class Videogiochi {
          GiochiDiRuolo
        }
 
-        public Videogiochi(int IdVideogioco, String titolo, Date AnnoPubblicazione, double prezzo, String piattaforma, double durata, Genere genere){
-            this.IdVideogioco = IdVideogioco;
-            this.titolo = titolo;
-            this.AnnoPubblicazione = AnnoPubblicazione;
-            this.prezzo = prezzo;
+        public Videogiochi(int Id, String titolo, Date AnnoPubblicazione, double prezzo, String piattaforma, double durata, Genere genere){
+            super(Id, titolo, AnnoPubblicazione, prezzo);
             this.piattaforma = piattaforma;
             this.durata = durata;
             this.genere = genere;
-        }
-
-        public int getIdVideogioco(){
-            return IdVideogioco;
-        }
-
-        public String getTitolo(){
-            return titolo;
-        }
-
-        public Date getAnnoPubblicazione(){
-            return AnnoPubblicazione;
-        }
-
-        public double getPrezzo(){
-            return prezzo;
         }
 
         public String getPiattaforma(){
