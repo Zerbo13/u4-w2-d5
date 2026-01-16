@@ -5,10 +5,10 @@ import java.util.Date;
 public abstract class Gioco {
     private int Id;
     private String titolo;
-    private Date AnnoPubblicazione;
+    private int AnnoPubblicazione;
     private double prezzo;
 
-    public Gioco(int IdGioco, String titolo, Date AnnoPubblicazione, double prezzo) {
+    public Gioco(int IdGioco, String titolo, int AnnoPubblicazione, double prezzo) {
         this.Id = Id;
         this.titolo = titolo;
         this.AnnoPubblicazione = AnnoPubblicazione;
@@ -23,7 +23,7 @@ public abstract class Gioco {
         return titolo;
     }
 
-    public Date getAnnoPubblicazione(){
+    public int getAnnoPubblicazione(){
         return AnnoPubblicazione;
     }
 

@@ -21,7 +21,7 @@ public class Collezione {
     }
 
     //RICERCA GIOCO PER ID
-    private Gioco ricercaId(int Id) {
+    public Gioco ricercaId(int Id) {
         for (Gioco g : giochi) {
             if (g.getId() == Id) {
                 return g;
