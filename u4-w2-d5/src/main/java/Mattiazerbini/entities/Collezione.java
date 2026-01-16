@@ -12,7 +12,6 @@ public class Collezione {
     public boolean aggiungiGioco(Gioco gioco) {
         for (Gioco g : giochi) {
             if (g.getId() == gioco.getId()) {
-                System.out.println("ID gìà presente!");
                 return false;
             }
         }
